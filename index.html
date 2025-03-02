@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Load Tester</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Website Load Tester (Max 5 Concurrent, Fast Mode)</h1>
+
+    <label>Masukkan URL:</label>
+    <input type="text" id="url" placeholder="https://example.com">
+
+    <label>Request:</label>
+    <input type="number" id="requestCount" value="1000">
+
+    <label>Durasi:</label>
+    <input type="number" id="duration" value="10">
+    <select id="timeUnit">
+        <option value="seconds">Detik</option>
+        <option value="hours">Jam</option>
+    </select>
+
+    <button id="start">Mulai Test</button>
+    <button id="stop">Stop Test</button>
+
+    <div class="monitor">
+        <p><b>Monitor:</b> <span id="status">Menunggu...</span></p>
+        <p style="color: green;">Request Berhasil: <span id="successCount">0</span></p>
+        <p style="color: red;">Request Gagal: <span id="failCount">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
